@@ -143,3 +143,4 @@ The project should (or may) contain the following:
 The target audience for this project is computer science students or IT specialists who use Linux for education.
 
 #### What learning objectives should users achieve?
+Users of the linuxforeducation project should achieve mastery in creating and managing dotfiles for a distraction-free Arch Linux environment tailored to education. Users can achieve their best customization through flexible interaction with linuxforeducation dotfiles.
