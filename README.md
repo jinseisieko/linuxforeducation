@@ -140,5 +140,6 @@ The project should (or may) contain the following:
   - Opacity/transparency settings across UI elements  
 
 #### Who is the target audience for this project?
+The target audience for this project is computer science students or IT specialists who use Linux for education.
 
 #### What learning objectives should users achieve?
