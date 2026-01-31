@@ -144,3 +144,29 @@ The target audience for this project is computer science students or IT speciali
 
 #### What learning objectives should users achieve?
 Users of the linuxforeducation project should achieve mastery in creating and managing dotfiles for a distraction-free Arch Linux environment tailored to education. Users can achieve their best customization through flexible interaction with linuxforeducation dotfiles.
+
+### Technical Details
+ 
+#### What technology stack does the project use?
+- **Window Manager**: Hyprland
+- **Status Bar**: Quickshell (QtQuick/QML modules: workspace indicator, clock, window title, notification indicator)
+- **Alternative Status Bar/Launcher**: Waybar or Rofi
+- **Notifications**: Dunst (rules, timeouts, Do Not Disturb toggle, Pomodoro handling)
+- **Terminal Emulator**: Kitty (theme overrides: Nord, Catppuccin, Gruvbox; transparency, fonts, ligatures)
+- **Shell**: Bash (.bashrc, .bash_profile), Zsh (.zshrc, .zprofile) with aliases, functions, completions
+- **Editor**: Neovim (init.lua, color schemes), VS Code (optional, matching themes)
+- **App Launcher**: Quickshell launcher or Rofi (fuzzy search, modes, theming)
+- **Color Schemes**: Nord, Catppuccin, Gruvbox (unified across Kitty, Quickshell, Dunst, GTK)
+- **Theme Switcher**: Custom script (Kitty, Quickshell, Dunst reloading)
+- **Dotfiles Management**: Stow (symlink configs), Git (version control, backups)
+- **File Manager**: GTK-based (e.g., Nautilus with config) 
+- **Input**: libinput/Hyprland input config (keyboard layouts: US/RU, mouse sensitivity, XKB options)
+- **Pomodoro Timer**: Polydoro CLI (Rust, notifications via Dunst), custom scripts
+- **Note-taking**: Obsidian (Wayland config) [user project]
+- **Automation Scripts**: Install script, dependency installer, symlinks, verification, lock screen, theme reload 
+- **Display Manager**: Ly (optional)
+- **Themes**: GTK themes (lxappearance), PyWal or manual for consistency 
+- **Utilities**: Pipewire/Pavucontrol (audio), nmtui (network), feh (wallpapers), pacman hooks
+
+
+#### What are the system requirements?
