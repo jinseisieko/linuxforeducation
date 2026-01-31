@@ -148,25 +148,55 @@ Users of the linuxforeducation project should achieve mastery in creating and ma
 ### Technical Details
  
 #### What technology stack does the project use?
-- **Window Manager**: Hyprland
-- **Status Bar**: Quickshell (QtQuick/QML modules: workspace indicator, clock, window title, notification indicator)
-- **Alternative Status Bar/Launcher**: Waybar or Rofi
-- **Notifications**: Dunst (rules, timeouts, Do Not Disturb toggle, Pomodoro handling)
-- **Terminal Emulator**: Kitty (theme overrides: Nord, Catppuccin, Gruvbox; transparency, fonts, ligatures)
-- **Shell**: Bash (.bashrc, .bash_profile), Zsh (.zshrc, .zprofile) with aliases, functions, completions
-- **Editor**: Neovim (init.lua, color schemes), VS Code (optional, matching themes)
-- **App Launcher**: Quickshell launcher or Rofi (fuzzy search, modes, theming)
-- **Color Schemes**: Nord, Catppuccin, Gruvbox (unified across Kitty, Quickshell, Dunst, GTK)
-- **Theme Switcher**: Custom script (Kitty, Quickshell, Dunst reloading)
-- **Dotfiles Management**: Stow (symlink configs), Git (version control, backups)
-- **File Manager**: GTK-based (e.g., Nautilus with config) 
-- **Input**: libinput/Hyprland input config (keyboard layouts: US/RU, mouse sensitivity, XKB options)
-- **Pomodoro Timer**: Polydoro CLI (Rust, notifications via Dunst), custom scripts
-- **Note-taking**: Obsidian (Wayland config) [user project]
-- **Automation Scripts**: Install script, dependency installer, symlinks, verification, lock screen, theme reload 
-- **Display Manager**: Ly (optional)
-- **Themes**: GTK themes (lxappearance), PyWal or manual for consistency 
-- **Utilities**: Pipewire/Pavucontrol (audio), nmtui (network), feh (wallpapers), pacman hooks
-
+- **Window Manager/Compositor**: Hyprland
+- **Status Bars**: Waybar, Quickshell (QML modules: workspace, clock, window title, notifications), AGS (Aylur's GTK Shell)
+- **Terminal Emulators**: Kitty (Nord/Catppuccin/Gruvbox themes, transparency, fonts, ligatures), Alacritty, Foot
+- **Notification Daemons**: Dunst (rules, timeouts, filtering, DND toggle, Pomodoro handling), Mako
+- **App Launchers**: Rofi/Rofi-wayland (fuzzy search, theming), Wofi, Fuzzel, Tofi, Walker, Quickshell launcher
+- **Shell**: Bash (.bashrc, .bash_profile), Zsh (.zshrc, .zprofile) with Oh My Zsh, Starship, Powerlevel10k
+- **Shell Plugins**: zsh-autosuggestions, zsh-syntax-highlighting, zsh-history-substring-search, bash-completion
+- **Text Editors**: Neovim (init.lua, color schemes), VS Code (matching themes)
+- **File Managers**: Nautilus, Thunar, Ranger, lf
+- **Color Schemes**: Nord, Catppuccin (Mocha/Latte/Frappe/Macchiato), Gruvbox (Dark/Light), Dracula, Tokyo Night, Rosé Pine, Solarized, Everforest, One Dark, Material
+- **Dotfiles Management**: GNU Stow, Chezmoi, YADM, Bare Git Repository
+- **Wallpaper Tools**: Hyprpaper, Swww (animated), Swaybg, Waypaper (GUI), feh
+- **Lock Screen**: Swaylock/Swaylock-effects (blur, screenshots), Hyprlock, Gtklock
+- **Idle Management**: Swayidle, Hypridle
+- **Logout/Power Menu**: wlogout, Rofi power menu
+- **Screenshot Tools**: Grim, Slurp (region selection), Grimblast, Swappy (annotation), Satty, Hyprshot
+- **Screen Recording**: wf-recorder, wl-screenrec
+- **Color Picker**: Hyprpicker
+- **Clipboard Management**: wl-clipboard, Cliphist, Clipman, Clipvault, Clipse, CopyQ
+- **System Monitoring**: btop++, htop, top, Glances, bottom (btm)
+- **Audio**: PipeWire, PulseAudio, pipewire-pulse, WirePlumber, Pavucontrol, pamixer, wpctl
+- **Brightness Control**: brightnessctl, light, xbacklight
+- **Network Management**: NetworkManager (nmcli, nmtui, nm-applet), iwctl
+- **Bluetooth**: bluetoothctl, blueman, blueberry
+- **GTK Theming**: lxappearance, nwg-look, Oomox/Themix, Pywal (wallpaper colors), Gradience
+- **Fonts**: Nerd Fonts, Hack Nerd Font, FiraCode, JetBrains Mono, Iosevka, Font Awesome
+- **XDG Base Directories**: $XDG_CONFIG_HOME (~/.config), $XDG_DATA_HOME (~/.local/share), $XDG_CACHE_HOME (~/.cache), $XDG_STATE_HOME (~/.local/state), $XDG_RUNTIME_DIR
+- **Pomodoro Timers**: pomo-cli, timer (Go), pomo (shell script)
+- **CLI Utilities**: fzf (fuzzy finder), fd (find alternative), ripgrep/rg (grep alternative), bat (cat with highlighting), exa/eza (ls replacement), zoxide (smart cd), tldr, thefuck, delta (git pager), lazygit, ncdu, dust, duf, procs, sd
+- **Package Management**: pacman, yay (AUR), paru (AUR), flatpak, paccache, reflector, pkgfile
+- **Terminal Multiplexers**: tmux, zellij, screen
+- **Image Viewers**: imv (Wayland), feh, sxiv
+- **Document Tools**: pandoc, zathura, evince
+- **Productivity Apps**: Obsidian (Wayland config), Zotero, MPV
+- **Version Control**: Git, GitHub CLI, lazygit
+- **Development Runtimes**: Docker/Podman, Node.js/npm, Python/pip, Rust/Cargo
+- **Build Tools**: gcc/g++, make, cmake, meson, ninja
+- **Configuration Formats**: JSON/JSONC (Waybar), TOML, YAML, INI, CSS/SCSS (styling), Lua (Neovim), QML (Quickshell), JavaScript/TypeScript (AGS)
+- **Wayland Infrastructure**: wlroots, wayland-protocols, xdg-desktop-portal-hyprland, xdg-desktop-portal-wlr, wev (event viewer), wlr-randr
+- **Authentication**: polkit, polkit-gnome, lxsession
+- **Session Management**: systemd, D-Bus, XDG Autostart
+- **Input Configuration**: libinput, XKB, Hyprland input config
+- **Testing/Linting**: shellcheck, yamllint, pre-commit, GitHub Actions
+- **System Information**: neofetch, fastfetch, inxi, screenfetch
+- **Archive Tools**: tar, zip/unzip, 7zip/p7zip, atool
+- **File Synchronization**: rsync, syncthing
+- **Automation Scripts**: Theme switcher (Kitty/Quickshell/Dunst), dotfiles backup, installation automation, symbolic link creator, wallpaper rotation, Pomodoro integration
+- **Hyprland-Specific**: hyprctl, hyprland-per-window-layout, Hyprland Plugin System, hyprland-plugins
+- **Keyboard Layouts**: XKB options (US, Russian, multiple layouts), layout switching keybindings
+- **Containerization** (testing): Docker, Podman, Distrobox
 
 #### What are the system requirements?
