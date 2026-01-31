@@ -200,3 +200,9 @@ Users of the linuxforeducation project should achieve mastery in creating and ma
 - **Containerization** (testing): Docker, Podman, Distrobox
 
 #### What are the system requirements?
+The Computer Science & IT Students Entry-Level Minimum:
+- **Processor**: Intel Core i3 / AMD Ryzen 3 (2+ cores, 1.5-2.0 GHz)
+- **RAM**: 8GB minimum
+- **Storage**: 256GB SSD
+- **Display**: 1920x1080 (Full HD)
+- **Battery**: 5+ hours
